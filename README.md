@@ -1,6 +1,6 @@
-# Sito di Emilio Rostagno — V2 (Next.js + Tailwind)
+# Sito di Emilio Rostagno — Versione pulita con metodo aggiornato
 
-Questa versione include: sfondo panna, banner colorati, icone (lucide-react), menu blu.
+Questa versione mantiene il design iniziale e aggiorna solo la sezione "Come lavoreremo insieme".
 
 ## Istruzioni rapide
 1. Carica questi file su un repository GitHub.

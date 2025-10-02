@@ -1,6 +1,6 @@
+
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import { Briefcase, Shield, Repeat, Building2 } from "lucide-react";
 
 export default function SitoEmilioRostagno() {
   const [dark, setDark] = useState(false);
@@ -22,9 +22,9 @@ export default function SitoEmilioRostagno() {
         <title>Emilio Rostagno — Consulenza Finanziaria Vicenza</title>
         <meta name="description" content="Consulente finanziario per imprese familiari, PMI e trust a Vicenza. Pianificazione patrimoniale e protezione del patrimonio." />
       </Head>
-      <div className="min-h-screen bg-[#f9f6f1] text-neutral-900 transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-100" style={{fontFamily:'\"IBM Plex Sans\", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, \"Apple Color Emoji\", \"Segoe UI Emoji\"'}}>
+      <div className="min-h-screen bg-white text-neutral-900 transition-colors duration-300 dark:bg-neutral-950 dark:text-neutral-100" style={{fontFamily:'\"IBM Plex Sans\", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, \"Apple Color Emoji\", \"Segoe UI Emoji\"'}}>
         {/* Header */}
-        <header className="sticky top-0 z-40 backdrop-blur bg-[#f9f6f1]/90 dark:bg-neutral-950/80 border-b border-neutral-200/70 dark:border-neutral-800/70">
+        <header className="sticky top-0 z-40 backdrop-blur bg-white/80 dark:bg-neutral-950/80 border-b border-neutral-200/70 dark:border-neutral-800/70">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-6">
             <a href="#" className="flex items-center gap-2" aria-label="Home">
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-blue-700 to-indigo-800 shadow-md"></span>
@@ -32,11 +32,24 @@ export default function SitoEmilioRostagno() {
             </a>
 
             <nav className="hidden items-center gap-8 lg:flex">
-              <a href="#specializzazioni" className="hover:opacity-80 text-blue-700 font-medium">Specializzazioni</a>
-              <a href="#metodo" className="hover:opacity-80 text-blue-700 font-medium">Metodo</a>
-              <a href="#bio" className="hover:opacity-80 text-blue-700 font-medium">Chi sono</a>
-              <a href="#contatti" className="hover:opacity-80 text-blue-700 font-medium">Contatti</a>
+              <a href="#specializzazioni" className="hover:opacity-80">Specializzazioni</a>
+              <a href="#metodo" className="hover:opacity-80">Metodo</a>
+              <a href="#contatti" className="hover:opacity-80">Contatti</a>
             </nav>
+
+            <div className="flex items-center gap-2">
+              <button
+                aria-label="Toggle tema"
+                onClick={() => setDark((v) => !v)}
+                className="rounded-2xl border border-neutral-300 bg-white px-3 py-2 text-sm shadow-sm transition hover:shadow md:text-base dark:border-neutral-700 dark:bg-neutral-900"
+              >
+                {dark ? (
+                  <span className="inline-flex items-center gap-2">Scuro</span>
+                ) : (
+                  <span className="inline-flex items-center gap-2">Chiaro</span>
+                )}
+              </button>
+            </div>
           </div>
         </header>
 
@@ -65,8 +78,18 @@ export default function SitoEmilioRostagno() {
           </div>
         </section>
 
-        {/* Banner separatore */}
-        <div className="w-full h-24 bg-gradient-to-r from-blue-600 to-indigo-700"></div>
+        {/* Specializzazioni */}
+        <section id="specializzazioni" className="mx-auto max-w-7xl px-4 py-16 lg:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">A chi mi rivolgo</h2>
+            <p className="mt-3 text-neutral-600 dark:text-neutral-300">Consulenza indipendente con focus su continuità aziendale e tutela del patrimonio.</p>
+          </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <Card title="Imprese familiari" desc="Passaggi generazionali, patti di famiglia, governance e allineamento valori‑obiettivi." />
+            <Card title="PMI" desc="Finanza operativa, budgeting, analisi e accesso al credito con approccio data‑driven." />
+            <Card title="Trust" desc="Protezione patrimoniale, strumenti fiduciari, coordinamento con professionisti legali e fiscali." />
+          </div>
+        </section>
 
         {/* Metodo */}
         <section id="metodo" className="mx-auto max-w-7xl px-4 py-16 lg:px-6">
@@ -78,35 +101,12 @@ export default function SitoEmilioRostagno() {
             <p>Monitoraggio nel tempo, report periodici ed eventuale ribilanciamento</p>
           </div>
           <ul className="mt-10 grid gap-6 md:grid-cols-2 text-neutral-700 dark:text-neutral-300">
-            <li className="p-6 rounded-xl bg-white shadow flex items-start gap-3 dark:bg-neutral-900"><Briefcase className="text-blue-700 w-6 h-6 shrink-0"/> <span>Creazione e gestione di soluzioni di investimento globali e diversificate.</span></li>
-            <li className="p-6 rounded-xl bg-white shadow flex items-start gap-3 dark:bg-neutral-900"><Shield className="text-blue-700 w-6 h-6 shrink-0"/> <span>Servizio di wealth protection: ottimizzazione fiscale, pianificazione legale e protezione del patrimonio familiare.</span></li>
-            <li className="p-6 rounded-xl bg-white shadow flex items-start gap-3 dark:bg-neutral-900"><Repeat className="text-blue-700 w-6 h-6 shrink-0"/> <span>Pianificazione del passaggio generazionale, aspetti fiscali e successori.</span></li>
-            <li className="p-6 rounded-xl bg-white shadow flex items-start gap-3 dark:bg-neutral-900"><Building2 className="text-blue-700 w-6 h-6 shrink-0"/> <span>Assistenza per aziende familiari nelle fasi di transizione e sviluppo.</span></li>
+            <li className="p-6 rounded-xl bg-white shadow dark:bg-neutral-900">1) Creazione e gestione di soluzioni di investimento globali e diversificate.</li>
+            <li className="p-6 rounded-xl bg-white shadow dark:bg-neutral-900">2) Servizio di wealth protection: ottimizzazione fiscale, pianificazione legale e protezione del patrimonio familiare.</li>
+            <li className="p-6 rounded-xl bg-white shadow dark:bg-neutral-900">3) Pianificazione del passaggio generazionale, aspetti fiscali e successori.</li>
+            <li className="p-6 rounded-xl bg-white shadow dark:bg-neutral-900">4) Assistenza per aziende familiari nelle fasi di transizione e sviluppo.</li>
           </ul>
         </section>
-
-        {/* Banner separatore */}
-        <div className="w-full h-24 bg-gradient-to-r from-indigo-700 to-blue-600"></div>
-
-        {/* Bio */}
-        <section id="bio" className="py-16">
-          <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Chi sono</h2>
-            <p className="text-lg text-neutral-700 dark:text-neutral-300 mb-4">
-              Formazione giuridica (Facoltà di Giurisprudenza – Università degli Studi di Padova) ed economica (Diploma di Ragioniere Programmatore).<br/>
-              Iscritto all’Albo dei Consulenti Finanziari abilitati all’offerta fuori sede (OCF, Delibera n. 1506 del 12.11.2020) e al RUI (sez. E).<br/>
-              Certificato EFPA – ESG Advisor (finanza sostenibile).
-            </p>
-            <p className="text-lg text-neutral-700 dark:text-neutral-300">
-              Sono un consulente finanziario che crede nell'importanza della conoscenza e dell'esperienza per aiutare i clienti a raggiungere i propri obiettivi.<br/><br/>
-              Oltre al lavoro nel settore finanziario, sono appassionato di storia, archeologia, arti marziali e cultura orientale. Queste passioni mi hanno insegnato l'importanza della visione a lungo termine, della disciplina e dell'equilibrio tra mente e corpo.<br/><br/>
-              Sono un ascoltatore attento e mi impegno a creare connessioni significative con i miei clienti per sviluppare strategie finanziarie personalizzate, nell’ottica di costruire insieme un futuro solido e duraturo.
-            </p>
-          </div>
-        </section>
-
-        {/* Banner separatore */}
-        <div className="w-full h-24 bg-gradient-to-r from-blue-600 to-indigo-700"></div>
 
         {/* Contatti */}
         <section id="contatti" className="mx-auto max-w-3xl px-4 py-20 lg:px-6">
@@ -124,11 +124,22 @@ export default function SitoEmilioRostagno() {
               © {new Date().getFullYear()} Emilio Rostagno — Tutti i diritti riservati
             </div>
             <div className="flex items-center gap-4">
+              <a href="#" className="hover:underline">Privacy</a>
+              <a href="#" className="hover:underline">Termini</a>
               <a href="#contatti" className="hover:underline">Contatti</a>
             </div>
           </div>
         </footer>
       </div>
+    </div>
+  );
+}
+
+function Card({ title, desc }) {
+  return (
+    <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900">
+      <h4 className="text-lg font-semibold">{title}</h4>
+      <p className="mt-1 text-neutral-600 dark:text-neutral-300">{desc}</p>
     </div>
   );
 }
