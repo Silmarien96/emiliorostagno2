@@ -18,7 +18,7 @@ export default function SitoEmilioRostagno() {
 
   return (
     <div className={dark ? "dark" : ""}>
-      \1
+      <Head>
         <link rel="canonical" href="https://emilio.rostagno.it/" />
         <title>Emilio Rostagno — Consulenza Finanziaria Vicenza</title>
         <meta name="description" content="Consulenza finanziaria a Vicenza: imprese familiari, PMI, investimenti e pianificazione del patrimonio di famiglia." />
@@ -163,11 +163,11 @@ export default function SitoEmilioRostagno() {
   <div className="grid items-center gap-10 lg:grid-cols-2">
     <div>
       <h3 className="text-2xl font-semibold">Come lavoreremo insieme</h3>
-      <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-        Definizione delle aspettative e degli obiettivi<br />
-        Programmazione del metodo e scelta degli strumenti<br />
-        Monitoraggio nel tempo, report periodici ed eventuale ribilanciamento
-      </p>
+      <div className="mt-3 space-y-2 text-neutral-700 dark:text-neutral-300">
+        <p>Definizione delle aspettative e degli obiettivi</p>
+        <p>Programmazione del metodo e scelta degli strumenti</p>
+        <p>Monitoraggio nel tempo, report periodici ed eventuale ribilanciamento</p>
+      </div>
     </div>
     <div className="grid gap-6 sm:grid-cols-2">
       <div className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
