@@ -1,12 +1,9 @@
-# Sito di Emilio Rostagno — Versione pulita con metodo aggiornato
 
-Questa versione mantiene il design iniziale e aggiorna solo la sezione "Come lavoreremo insieme".
+# Sito di Emilio Rostagno — Node 22 + Next 15
 
-## Istruzioni rapide
-1. Carica questi file su un repository GitHub.
-2. Importa il repo su **Vercel** (New Project → Deploy).
-3. Per collegare il dominio, aggiungilo in Project Settings → Domains e imposta i record DNS sul provider.
+- `engines.node = 22.x`
+- `next.config.js` con ignoreDuringBuilds e immagini non ottimizzate (niente dipendenze binarie)
+- Foto in /public (emilio-hero.jpg, emilio-ritratto.jpg)
+- Banner gradiente e sezioni pronte
 
-## Avvio locale (opzionale)
-- `npm install`
-- `npm run dev` (http://localhost:3000)
+Deploy: carica il contenuto su GitHub, fai Commit, poi Redeploy su Vercel (Skip Build Cache).

@@ -1,0 +1,9 @@
+{
+  "name": "Emilio Rostagno",
+  "short_name": "Rostagno",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F2A47",
+  "theme_color": "#0F2A47",
+  "icons": []
+}
