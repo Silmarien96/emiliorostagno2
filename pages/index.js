@@ -152,7 +152,7 @@ export default function SitoEmilioRostagno() {
         {/* Strip numeri */}
         <section className="mx-auto max-w-7xl px-4 py-12">
           <div className="grid gap-6 rounded-3xl border border-neutral-200 bg-white/70 p-6 backdrop-blur md:grid-cols-3 dark:border-neutral-800">
-            <div><p className="text-3xl font-semibold text-[#1E3A8A]">> 10 anni</p><p className="text-sm text-neutral-600">in pianificazione</p></div>
+            <div><p className="text-3xl font-semibold text-[#1E3A8A]">&gt; 10 anni</p><p className="text-sm text-neutral-600">in pianificazione</p></div>
             <div><p className="text-3xl font-semibold text-[#1E3A8A]">Processo</p><p className="text-sm text-neutral-600">diagnosi → piano → KPI</p></div>
             <div><p className="text-3xl font-semibold text-[#1E3A8A]">Vicenza</p><p className="text-sm text-neutral-600">in studio o online</p></div>
           </div>
